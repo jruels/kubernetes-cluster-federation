@@ -8,6 +8,7 @@ gcloud container clusters create gce-us-east1 --zone=us-east1-b --scopes "cloud-
 echo "Creating US-Central-1 Cluster"
 gcloud container clusters create gce-us-central1 --zone=us-central1-b --scopes "cloud-platform,storage-ro,logging-write,monitoring-write,service-control,service-management,https://www.googleapis.com/auth/ndev.clouddns.readwrite"
 echo "Waiting 30 Seconds while Kubernetes becomes available"
+sleep 30
 echo "Get cluster credentials"
 gcloud container clusters get-credentials gce-asia-east1 --zone=asia-east1-b
 gcloud container clusters get-credentials gce-europe-west1 --zone=europe-west1-b
