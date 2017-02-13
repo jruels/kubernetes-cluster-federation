@@ -84,8 +84,8 @@ echo "Create Federation Namespace"
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" create -f ns/federation.yaml
 echo "Create Federation API Server Service"
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" create -f services/federation-apiserver.yaml
-echo "Wait for 60 Seconds until the API server becomes available"
-sleep 60
+echo "Wait for 90 Seconds until the API server becomes available"
+sleep 90
 echo "Creating Federation secrets"
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation create secret generic federation-apiserver-secrets --from-file=known-tokens.csv
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation describe secrets federation-apiserver-secrets
@@ -107,6 +107,7 @@ kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation describe secrets federation-apiserver-kubeconfig
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation create -f deployments/federation-controller-manager.yaml
 echo "Waiting 60 seconds whil the Federation controller becomes available"
+sleep 60
 # Add Clusters to Federation
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation create secret generic gce-asia-east1 --from-file=kubeconfigs/gce-asia-east1/kubeconfig
 kubectl --context=federation-cluster create -f clusters/gce-asia-east1.yaml
