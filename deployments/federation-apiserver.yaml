@@ -23,7 +23,7 @@ spec:
           - --etcd-servers=http://localhost:2379
           - --service-cluster-ip-range=10.10.0.0/24
           - --secure-port=443
-          - --advertise-address=ADVERTISE_ADDRESS
+          - --advertise-address=130.211.188.20
           - --token-auth-file=/srv/kubernetes/known-tokens.csv
         ports:
           - containerPort: 443
