@@ -93,7 +93,7 @@ echo "Creating Persistent Disk"
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation create -f pvc/federation-apiserver-etcd.yaml
 echo "Creating the Deployment"
 FEDERATED_API_SERVER_ADDRESS=$(kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation get services federation-apiserver -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-sed -i "" "s|ADVERTISE_ADDRESS|${FEDERATED_API_SERVER_ADDRESS}|g" deployments/federation-apiserver.yaml
+sed -i "s|ADVERTISE_ADDRESS|${FEDERATED_API_SERVER_ADDRESS}|g" deployments/federation-apiserver.yaml
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation create -f deployments/federation-apiserver.yaml
 #Create the Federation context
 FEDERATED_API_SERVER_ADDRESS=$(kubectl --context="gke_${GCP_PROJECT}_us-central1-b_gce-us-central1" --namespace=federation get services federation-apiserver -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
