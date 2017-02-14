@@ -1,3 +1,5 @@
+# Clean up session crud
+rm -f ~/.kube/config
 # Create GKE clusters
 echo "Creating Asia-East-1 Cluster"
 gcloud container clusters create gce-asia-east1 --zone asia-east1-b --scopes "cloud-platform,storage-ro,logging-write,monitoring-write,service-control,service-management,https://www.googleapis.com/auth/ndev.clouddns.readwrite"
