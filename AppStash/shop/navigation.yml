@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: navigation
+spec:
+  replicas: 4
+  selector:
+    name: navigation
+  template:
+    metadata:
+      labels:
+        name: navigation
+        role: backend
+      name: navigation
+    spec:
+      containers:
+        - name: navigation
+          image: zutherb/navigation-service
+          ports:
+            - containerPort: 18090

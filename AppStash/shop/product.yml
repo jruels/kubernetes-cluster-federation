@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: product
+spec:
+  replicas: 4
+  selector:
+    name: product
+  template:
+    metadata:
+      labels:
+        name: product
+        role: backend
+      name: product
+    spec:
+      containers:
+        - name: product
+          image: zutherb/product-service
+          ports:
+            - containerPort: 18080

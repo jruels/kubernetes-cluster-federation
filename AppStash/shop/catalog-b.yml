@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  replicas: 4
+  selector:
+    name: catalog
+  template:
+    metadata:
+      labels:
+        name: catalog
+        role: frontend
+        app: catalog
+      name: catalog
+    spec:
+      containers:
+        - name: catalog
+          image: zutherb/catalog-frontend
+          ports:
+            - containerPort: 80
+          env:
+            - name: CHECKOUT_DESIGN
+              value: "amelia"
