@@ -3,6 +3,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: cart-db
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: cart-db
 spec:
@@ -12,8 +30,6 @@ spec:
       labels:
         name: cart-db
     spec:
-      nodeSelector:
-        cloud: USA
       containers:
       - name: cart-db
         image: mongo
@@ -54,6 +70,24 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   name: cart
   labels:
     name: cart
@@ -106,6 +140,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: catalogue-db
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: catalogue-db
 spec:
@@ -115,8 +167,6 @@ spec:
       labels:
         name: catalogue-db
     spec:
-      nodeSelector:
-        cloud: USA
       containers:
       - name: catalogue-db
         image: weaveworksdemos/catalogue-db:0.3.0
@@ -147,6 +197,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: catalogue
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: catalogue
 spec:
@@ -192,6 +260,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: front-end
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
 spec:
   replicas: 4
   template:
@@ -234,6 +320,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: orders-db
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: orders-db
 spec:
@@ -243,8 +347,6 @@ spec:
       labels:
         name: orders-db
     spec:
-      nodeSelector:
-        cloud: USA
       containers:
       - name: orders-db
         image: mongo
@@ -286,6 +388,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: orders
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: orders
 spec:
@@ -337,6 +457,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: payment
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: payment
 spec:
@@ -382,6 +520,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: queue-master
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: queue-master
 spec:
@@ -417,6 +573,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: rabbitmq
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: rabbitmq
 spec:
@@ -460,6 +634,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: shipping
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: shipping
 spec:
@@ -511,6 +703,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: user-db
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: user-db
 spec:
@@ -520,8 +730,6 @@ spec:
       labels:
         name: user-db
     spec:
-      nodeSelector:
-        cloud: USA
       containers:
       - name: user-db
         image: weaveworksdemos/user-db:0.4.0
@@ -563,6 +771,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: user
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: user
 spec:
@@ -610,6 +836,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: zipkin
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: zipkin
 spec:
@@ -650,6 +894,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: zipkin-mysql
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: zipkin-mysql
 spec:
@@ -684,6 +946,24 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: zipkin-cron
+  annotations:
+    federation.kubernetes.io/deployment-preferences: |
+        {
+            "rebalance": true,
+            "clusters": {
+                "gce-us-east1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                },
+            "clusters": {
+                "gce-us-central1": {
+                    "minReplicas": 2,
+                    "maxReplicas": 4,
+                    "weight": 1
+                }
+            }
+        }
   labels:
     name: zipkin-cron
 spec:
