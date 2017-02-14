@@ -1,10 +1,10 @@
 apiVersion: federation/v1beta1
 kind: Cluster
 metadata:
-  name: gce-us-east1
+  name: sockshop-europe
 spec:
   serverAddressByClientCIDRs:
     - clientCIDR: "0.0.0.0/0"
-      serverAddress: "https://104.196.69.95"
+      serverAddress: "https://130.211.86.12"
   secretRef:
-    name: gce-us-east1
+    name: sockshop-europe

@@ -8,12 +8,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -74,12 +74,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -143,12 +143,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -199,12 +199,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -261,12 +261,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -320,12 +320,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -387,12 +387,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -455,12 +455,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -517,12 +517,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -569,12 +569,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -629,12 +629,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -697,12 +697,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -764,12 +764,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -828,12 +828,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -885,12 +885,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
@@ -936,12 +936,12 @@ metadata:
         {
             "rebalance": true,
             "clusters": {
-                "gce-us-east1": {
+                "sockshop-useast": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
                 },
-                "gce-us-central1": {
+                "sockshop-uscentral": {
                     "minReplicas": 1,
                     "maxReplicas": 2,
                     "weight": 1
