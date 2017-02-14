@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: apiserver
-        image: gcr.io/google_containers/hyperkube-amd64:v1.4.0
+        image: gcr.io/google_containers/hyperkube-amd64:v1.5.2
         command:
           - /hyperkube
           - federation-apiserver
@@ -47,6 +47,6 @@ spec:
         - name: federation-apiserver-secrets
           secret:
             secretName: federation-apiserver-secrets
-        - name: etcd-data 
+        - name: etcd-data
           persistentVolumeClaim:
             claimName: federation-apiserver-etcd
