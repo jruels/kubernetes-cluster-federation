@@ -248,8 +248,6 @@ metadata:
                 }
             }
         }
-  labels:
-    name: front-end
 spec:
   replicas: 1
   template:
