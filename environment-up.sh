@@ -125,3 +125,5 @@ export ASIA=$(kubectl config get-contexts -o name | grep sockshop-asia)
 export EUROPE=$(kubectl config get-contexts -o name | grep sockshop-europe)
 export USCENTRAL=$(kubectl config get-contexts -o name | grep sockshop-uscentral)
 export USEAST=$(kubectl config get-contexts -o name | grep sockshop-useast)
+# Run the initial Deployment
+kubectl apply -f sockshop1.yaml
