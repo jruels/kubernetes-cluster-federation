@@ -120,7 +120,7 @@ kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namesp
 kubectl --context=federation-cluster create -f clusters/sockshop-uscentral.yaml
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namespace=federation create secret generic sockshop-useast --from-file=kubeconfigs/sockshop-useast/kubeconfig
 kubectl --context=federation-cluster create -f clusters/sockshop-useast.yaml
-# Make some shortcuts for ease or use
+# Make some shortcuts for ease of use
 export ASIA=$(kubectl config get-contexts -o name | grep sockshop-asia)
 export EUROPE=$(kubectl config get-contexts -o name | grep sockshop-europe)
 export USCENTRAL=$(kubectl config get-contexts -o name | grep sockshop-uscentral)
