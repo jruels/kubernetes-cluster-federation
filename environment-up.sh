@@ -109,7 +109,7 @@ kubectl config view --flatten --minify > kubeconfigs/federation-apiserver/kubeco
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namespace=federation create secret generic federation-apiserver-kubeconfig --from-file=kubeconfigs/federation-apiserver/kubeconfig
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namespace=federation describe secrets federation-apiserver-kubeconfig
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namespace=federation create -f deployments/federation-controller-manager.yaml
-echo "Waiting 60 seconds whil the Federation controller becomes available"
+echo "Waiting 60 seconds while the Federation controller becomes available"
 sleep 60
 # Add Clusters to Federation
 kubectl --context="gke_${GCP_PROJECT}_us-central1-b_sockshop-uscentral" --namespace=federation create secret generic sockshop-asia --from-file=kubeconfigs/sockshop-asia/kubeconfig
